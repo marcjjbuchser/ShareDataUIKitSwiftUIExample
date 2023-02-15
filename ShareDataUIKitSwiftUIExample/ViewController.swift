@@ -6,14 +6,19 @@
 //
 
 import UIKit
+import SwiftUI
 
-class ViewController: UIViewController {
-
+class ViewController: UIHostingController<SwiftUITestView> {
+    private var contentViewModel = ContentViewModel()
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder, rootView: SwiftUITestView(contentViewModel: contentViewModel))
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        print(#function)
     }
-
-
 }
+
 
