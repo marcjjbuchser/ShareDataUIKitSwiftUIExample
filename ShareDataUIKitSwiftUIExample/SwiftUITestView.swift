@@ -9,12 +9,12 @@ import SwiftUI
 
 struct SwiftUITestView: View {
     
-    var contentViewModel : ContentViewModel
+    var contentModel : ContentModel
 
     var body: some View {
         VStack {
-            Text("Content title: \(contentViewModel.contents.first?.id ?? "")").padding(10)
-            Text("Content Count: \(contentViewModel.contents.count)")
+            Text("Content title: \(contentModel.contents.first?.id ?? "")").padding(10)
+            Text("Content Count: \(contentModel.contents.count)")
             
         }
     }
@@ -23,6 +23,6 @@ struct SwiftUITestView: View {
 
 struct SwiftUITestView_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftUITestView(contentViewModel: ContentViewModel())
+        SwiftUITestView(contentModel: ContentModel())
     }
 }

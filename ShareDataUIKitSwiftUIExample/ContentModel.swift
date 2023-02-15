@@ -12,7 +12,7 @@ struct Content : Identifiable {
     var title: String
 }
 
-class ContentViewModel {
+class ContentModel {
     private(set) var contents: [Content] = [Content(title: "Preview")]
     
     @discardableResult

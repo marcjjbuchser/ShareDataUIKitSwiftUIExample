@@ -9,10 +9,10 @@ import UIKit
 import SwiftUI
 
 class ViewController: UIHostingController<SwiftUITestView> {
-    private var contentViewModel = ContentViewModel()
+    private var contentModel = ContentModel()
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder, rootView: SwiftUITestView(contentViewModel: contentViewModel))
+        super.init(coder: coder, rootView: SwiftUITestView(contentModel: contentModel))
     }
     
     override func viewDidLoad() {
